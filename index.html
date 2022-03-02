@@ -65,6 +65,7 @@
                 6. Some things won't be as cool as the real Wordle (I'm not a professsional).<br>
                 7. Type <b>slowly</b>. Otherwise it might skip a box.<br>
                 8. Don't use this to actually study, your notes will be much more helpful.
+                9. Don't play this in USH Lecture or Practicum.
             </p>
             <div class = "kb" id = "q">Q</div><div class = "kb" id = "w">W</div><div class = "kb" id = "e">E</div><div class = "kb" id = "r">R</div><div class = "kb" id = "t">T</div><div class = "kb" id = "y">Y</div><div class = "kb" id = "u">U</div><div class = "kb" id = "i">I</div><div class = "kb" id = "o">O</div><div class = "kb" id = "p">P</div><br><br>
             <div class = "space">a</div><div class = "kb" id = "a">A</div><div class = "kb" id = "s">S</div><div class = "kb" id = "d">D</div><div class = "kb" id = "f">F</div><div class = "kb" id = "g">G</div><div class = "kb" id = "h">H</div><div class = "kb" id = "j">J</div><div class = "kb" id = "k">K</div><div class = "kb" id = "l">L</div><br><br>
@@ -448,7 +449,7 @@
                     let word = (l1 + l2 + l3 + l4 + l5 + l6);
                     let arr = [l6, l5, l4, l3, l2, l1];
                     let truearr = trueword.split('');
-                    if (words.includes(word)){
+                    if (words.includes(word) || keybank.includes(word)){
                         if (trueword.includes(l1)){
                             if (trueword[0] === l1){
                                 i1.className = "g"
@@ -662,7 +663,7 @@
                     let word = (l1 + l2 + l3 + l4 + l5 + l6);
                     let arr = [l6, l5, l4, l3, l2, l1];
                     let truearr = trueword.split('');
-                    if (words.includes(word)){
+                    if (words.includes(word) || keybank.includes(word)){
                         if (trueword.includes(l1)){
                             if (trueword[0] === l1){
                                 i11.className = "g"
@@ -876,7 +877,7 @@
                     let word = (l1 + l2 + l3 + l4 + l5 + l6);
                     let arr = [l6, l5, l4, l3, l2, l1];
                     let truearr = trueword.split('');
-                    if (words.includes(word)){
+                    if (words.includes(word) || keybank.includes(word)){
                         if (trueword.includes(l1)){
                             if (trueword[0] === l1){
                                 i21.className = "g"
@@ -1090,7 +1091,7 @@
                     let word = (l1 + l2 + l3 + l4 + l5 + l6);
                     let arr = [l6, l5, l4, l3, l2, l1];
                     let truearr = trueword.split('');
-                    if (words.includes(word)){
+                    if (words.includes(word) || keybank.includes(word)){
                         if (trueword.includes(l1)){
                             if (trueword[0] === l1){
                                 i31.className = "g"
@@ -1304,7 +1305,7 @@
                     let word = (l1 + l2 + l3 + l4 + l5 + l6);
                     let arr = [l6, l5, l4, l3, l2, l1];
                     let truearr = trueword.split('');
-                    if (words.includes(word)){
+                    if (words.includes(word) || keybank.includes(word)){
                         if (trueword.includes(l1)){
                             if (trueword[0] === l1){
                                 i41.className = "g"
@@ -1518,7 +1519,7 @@
                     let word = (l1 + l2 + l3 + l4 + l5 + l6);
                     let arr = [l6, l5, l4, l3, l2, l1];
                     let truearr = trueword.split('');
-                    if (words.includes(word)){
+                    if (words.includes(word) || keybank.includes(word)){
                         if (trueword.includes(l1)){
                             if (trueword[0] === l1){
                                 i51.className = "g"
