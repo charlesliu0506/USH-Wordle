@@ -66,6 +66,9 @@
                 7. Type <b>slowly</b>. Otherwise it might skip a box.<br>
                 8. Don't use this to actually study, your notes will be much more helpful.
             </p>
+            <div class = "kb" id = "q">Q</div><div class = "kb" id = "w">W</div><div class = "kb" id = "e">E</div><div class = "kb" id = "r">R</div><div class = "kb" id = "t">T</div><div class = "kb" id = "y">Y</div><div class = "kb" id = "u">U</div><div class = "kb" id = "i">I</div><div class = "kb" id = "o">O</div><div class = "kb" id = "p">P</div><br><br>
+            <div class = "space">a</div><div class = "kb" id = "a">A</div><div class = "kb" id = "s">S</div><div class = "kb" id = "d">D</div><div class = "kb" id = "f">F</div><div class = "kb" id = "g">G</div><div class = "kb" id = "h">H</div><div class = "kb" id = "j">J</div><div class = "kb" id = "k">K</div><div class = "kb" id = "l">L</div><br><br>
+            <div class = "space">a</div><div class = "bigspace">Z</div><div class = "kb" id = "z">Z</div><div class = "kb" id = "x">X</div><div class = "kb" id = "c">C</div><div class = "kb" id = "v">V</div><div class = "kb" id = "b">B</div><div class = "kb" id = "n">N</div><div class = "kb" id = "m">M</div>
         </div>
         <script>
             const words = ["aahing", "aaliis", "aarrgh", "abacas", "abacus", "abakas", "abamps", "abased", "abaser", "abases", "abasia",
@@ -390,6 +393,7 @@
             i54.disabled = true;
             i55.disabled = true;
             i56.disabled = true;
+            const glist = [];
             i1.addEventListener("keyup", function(event){
                 if (event.keyCode === 8){
                     i1.focus();
@@ -448,6 +452,8 @@
                         if (trueword.includes(l1)){
                             if (trueword[0] === l1){
                                 i1.className = "g"
+                                document.getElementById(l1).className = "gk"
+                                glist.push(l1);
                             }
                             else{
                                 if (count(l1, arr) > count(l1, truearr)){
@@ -456,15 +462,21 @@
                                 }
                                 else{
                                     i1.className = "y"
+                                    if (!glist.includes(l1)){
+                                        document.getElementById(l1).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i1.className = "b"
+                            document.getElementById(l1).className = "bk"
                         }
                         if (trueword.includes(l2)){
                             if (trueword[1] === l2){
                                 i2.className = "g"
+                                document.getElementById(l2).className = "gk"
+                                glist.push(l2)
                             }
                             else{
                                 if (count(l2, arr) > count(l2, truearr)){
@@ -473,15 +485,21 @@
                                 }
                                 else{
                                     i2.className = "y"
+                                    if (!glist.includes(l2)){
+                                        document.getElementById(l2).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i2.className = "b"
+                            document.getElementById(l2).className = "bk"
                         }
                         if (trueword.includes(l3)){
                             if (trueword[2] === l3){
                                 i3.className = "g"
+                                document.getElementById(l3).className = "gk"
+                                glist.push(l3)
                             }
                             else{
                                 if (count(l3, arr) > count(l3, truearr)){
@@ -490,15 +508,21 @@
                                 }
                                 else{
                                     i3.className = "y"
+                                    if (!glist.includes(l3)){
+                                        document.getElementById(l3).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i3.className = "b"
+                            document.getElementById(l3).className = "bk"
                         }
                         if (trueword.includes(l4)){
                             if (trueword[3] === l4){
                                 i4.className = "g"
+                                document.getElementById(l4).className = "gk"
+                                glist.push(l4)
                             }
                             else{
                                 if (count(l4, arr) > count(l4, truearr)){
@@ -507,15 +531,21 @@
                                 }
                                 else{
                                     i4.className = "y"
+                                    if (!glist.includes(l4)){
+                                        document.getElementById(l4).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i4.className = "b"
+                            document.getElementById(l4).className = "bk"
                         }
                         if (trueword.includes(l5)){
                             if (trueword[4] === l5){
                                 i5.className = "g"
+                                document.getElementById(l5).className = "gk"
+                                glist.push(l5)
                             }
                             else{
                                 if (count(l5, arr) > count(l5, truearr)){
@@ -524,15 +554,21 @@
                                 }
                                 else{
                                     i5.className = "y"
+                                    if (!glist.includes(l5)){
+                                        document.getElementById(l5).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i5.className = "b"
+                            document.getElementById(l5).className = "bk"
                         }
                         if (trueword.includes(l6)){
                             if (trueword[5] === l6){
                                 i6.className = "g"
+                                document.getElementById(l6).className = "gk"
+                                glist.push(l6)
                             }
                             else{
                                 if (count(l6, arr) > count(l6, truearr)){
@@ -541,11 +577,15 @@
                                 }
                                 else{
                                     i6.className = "y"
+                                    if (!glist.includes(l6)){
+                                        document.getElementById(l6).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i6.className = "b"
+                            document.getElementById(l6).className = "bk"
                         }
                         i1.disabled = true;
                         i2.disabled = true;
@@ -626,6 +666,8 @@
                         if (trueword.includes(l1)){
                             if (trueword[0] === l1){
                                 i11.className = "g"
+                                document.getElementById(l1).className = "gk"
+                                glist.push(l1);
                             }
                             else{
                                 if (count(l1, arr) > count(l1, truearr)){
@@ -634,15 +676,21 @@
                                 }
                                 else{
                                     i11.className = "y"
+                                    if (!glist.includes(l1)){
+                                        document.getElementById(l1).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i11.className = "b"
+                            document.getElementById(l1).className = "bk"
                         }
                         if (trueword.includes(l2)){
                             if (trueword[1] === l2){
                                 i12.className = "g"
+                                document.getElementById(l2).className = "gk"
+                                glist.push(l2)
                             }
                             else{
                                 if (count(l2, arr) > count(l2, truearr)){
@@ -651,15 +699,21 @@
                                 }
                                 else{
                                     i12.className = "y"
+                                    if (!glist.includes(l2)){
+                                        document.getElementById(l2).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i12.className = "b"
+                            document.getElementById(l2).className = "bk"
                         }
                         if (trueword.includes(l3)){
                             if (trueword[2] === l3){
                                 i13.className = "g"
+                                document.getElementById(l3).className = "gk"
+                                glist.push(l3)
                             }
                             else{
                                 if (count(l3, arr) > count(l3, truearr)){
@@ -668,15 +722,21 @@
                                 }
                                 else{
                                     i13.className = "y"
+                                    if (!glist.includes(l3)){
+                                        document.getElementById(l3).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i13.className = "b"
+                            document.getElementById(l3).className = "bk"
                         }
                         if (trueword.includes(l4)){
                             if (trueword[3] === l4){
                                 i14.className = "g"
+                                document.getElementById(l4).className = "gk"
+                                glist.push(l4)
                             }
                             else{
                                 if (count(l4, arr) > count(l4, truearr)){
@@ -685,15 +745,21 @@
                                 }
                                 else{
                                     i14.className = "y"
+                                    if (!glist.includes(l4)){
+                                        document.getElementById(l4).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i14.className = "b"
+                            document.getElementById(l4).className = "bk"
                         }
                         if (trueword.includes(l5)){
                             if (trueword[4] === l5){
                                 i15.className = "g"
+                                document.getElementById(l5).className = "gk"
+                                glist.push(l5)
                             }
                             else{
                                 if (count(l5, arr) > count(l5, truearr)){
@@ -702,15 +768,21 @@
                                 }
                                 else{
                                     i15.className = "y"
+                                    if (!glist.includes(l5)){
+                                        document.getElementById(l5).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i15.className = "b"
+                            document.getElementById(l5).className = "bk"
                         }
                         if (trueword.includes(l6)){
                             if (trueword[5] === l6){
                                 i16.className = "g"
+                                document.getElementById(l6).className = "gk"
+                                glist.push(l6)
                             }
                             else{
                                 if (count(l6, arr) > count(l6, truearr)){
@@ -719,11 +791,15 @@
                                 }
                                 else{
                                     i16.className = "y"
+                                    if (!glist.includes(l6)){
+                                        document.getElementById(l6).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i16.className = "b"
+                            document.getElementById(l6).className = "bk"
                         }
                         i11.disabled = true;
                         i12.disabled = true;
@@ -804,6 +880,8 @@
                         if (trueword.includes(l1)){
                             if (trueword[0] === l1){
                                 i21.className = "g"
+                                document.getElementById(l1).className = "gk"
+                                glist.push(l1);
                             }
                             else{
                                 if (count(l1, arr) > count(l1, truearr)){
@@ -812,15 +890,21 @@
                                 }
                                 else{
                                     i21.className = "y"
+                                    if (!glist.includes(l1)){
+                                        document.getElementById(l1).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i21.className = "b"
+                            document.getElementById(l1).className = "bk"
                         }
                         if (trueword.includes(l2)){
                             if (trueword[1] === l2){
                                 i22.className = "g"
+                                document.getElementById(l2).className = "gk"
+                                glist.push(l2)
                             }
                             else{
                                 if (count(l2, arr) > count(l2, truearr)){
@@ -829,15 +913,21 @@
                                 }
                                 else{
                                     i22.className = "y"
+                                    if (!glist.includes(l2)){
+                                        document.getElementById(l2).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i22.className = "b"
+                            document.getElementById(l2).className = "bk"
                         }
                         if (trueword.includes(l3)){
                             if (trueword[2] === l3){
                                 i23.className = "g"
+                                document.getElementById(l3).className = "gk"
+                                glist.push(l3)
                             }
                             else{
                                 if (count(l3, arr) > count(l3, truearr)){
@@ -846,15 +936,21 @@
                                 }
                                 else{
                                     i23.className = "y"
+                                    if (!glist.includes(l3)){
+                                        document.getElementById(l3).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i23.className = "b"
+                            document.getElementById(l3).className = "bk"
                         }
                         if (trueword.includes(l4)){
                             if (trueword[3] === l4){
                                 i24.className = "g"
+                                document.getElementById(l4).className = "gk"
+                                glist.push(l4)
                             }
                             else{
                                 if (count(l4, arr) > count(l4, truearr)){
@@ -863,15 +959,21 @@
                                 }
                                 else{
                                     i24.className = "y"
+                                    if (!glist.includes(l4)){
+                                        document.getElementById(l4).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i24.className = "b"
+                            document.getElementById(l4).className = "bk"
                         }
                         if (trueword.includes(l5)){
                             if (trueword[4] === l5){
                                 i25.className = "g"
+                                document.getElementById(l5).className = "gk"
+                                glist.push(l5)
                             }
                             else{
                                 if (count(l5, arr) > count(l5, truearr)){
@@ -880,15 +982,21 @@
                                 }
                                 else{
                                     i25.className = "y"
+                                    if (!glist.includes(l5)){
+                                        document.getElementById(l5).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i25.className = "b"
+                            document.getElementById(l5).className = "bk"
                         }
                         if (trueword.includes(l6)){
                             if (trueword[5] === l6){
                                 i26.className = "g"
+                                document.getElementById(l6).className = "gk"
+                                glist.push(l6)
                             }
                             else{
                                 if (count(l6, arr) > count(l6, truearr)){
@@ -897,11 +1005,15 @@
                                 }
                                 else{
                                     i26.className = "y"
+                                    if (!glist.includes(l6)){
+                                        document.getElementById(l6).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i26.className = "b"
+                            document.getElementById(l6).className = "bk"
                         }
                         i21.disabled = true;
                         i22.disabled = true;
@@ -982,6 +1094,8 @@
                         if (trueword.includes(l1)){
                             if (trueword[0] === l1){
                                 i31.className = "g"
+                                document.getElementById(l1).className = "gk"
+                                glist.push(l1);
                             }
                             else{
                                 if (count(l1, arr) > count(l1, truearr)){
@@ -990,15 +1104,21 @@
                                 }
                                 else{
                                     i31.className = "y"
+                                    if (!glist.includes(l1)){
+                                        document.getElementById(l1).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i31.className = "b"
+                            document.getElementById(l1).className = "bk"
                         }
                         if (trueword.includes(l2)){
                             if (trueword[1] === l2){
                                 i32.className = "g"
+                                document.getElementById(l2).className = "gk"
+                                glist.push(l2)
                             }
                             else{
                                 if (count(l2, arr) > count(l2, truearr)){
@@ -1007,15 +1127,21 @@
                                 }
                                 else{
                                     i32.className = "y"
+                                    if (!glist.includes(l2)){
+                                        document.getElementById(l2).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i32.className = "b"
+                            document.getElementById(l2).className = "bk"
                         }
                         if (trueword.includes(l3)){
                             if (trueword[2] === l3){
                                 i33.className = "g"
+                                document.getElementById(l3).className = "gk"
+                                glist.push(l3)
                             }
                             else{
                                 if (count(l3, arr) > count(l3, truearr)){
@@ -1024,15 +1150,21 @@
                                 }
                                 else{
                                     i33.className = "y"
+                                    if (!glist.includes(l3)){
+                                        document.getElementById(l3).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i33.className = "b"
+                            document.getElementById(l3).className = "bk"
                         }
                         if (trueword.includes(l4)){
                             if (trueword[3] === l4){
                                 i34.className = "g"
+                                document.getElementById(l4).className = "gk"
+                                glist.push(l4)
                             }
                             else{
                                 if (count(l4, arr) > count(l4, truearr)){
@@ -1041,15 +1173,21 @@
                                 }
                                 else{
                                     i34.className = "y"
+                                    if (!glist.includes(l4)){
+                                        document.getElementById(l4).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i34.className = "b"
+                            document.getElementById(l4).className = "bk"
                         }
                         if (trueword.includes(l5)){
                             if (trueword[4] === l5){
                                 i35.className = "g"
+                                document.getElementById(l5).className = "gk"
+                                glist.push(l5)
                             }
                             else{
                                 if (count(l5, arr) > count(l5, truearr)){
@@ -1058,15 +1196,21 @@
                                 }
                                 else{
                                     i35.className = "y"
+                                    if (!glist.includes(l5)){
+                                        document.getElementById(l5).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i35.className = "b"
+                            document.getElementById(l5).className = "bk"
                         }
                         if (trueword.includes(l6)){
                             if (trueword[5] === l6){
                                 i36.className = "g"
+                                document.getElementById(l6).className = "gk"
+                                glist.push(l6)
                             }
                             else{
                                 if (count(l6, arr) > count(l6, truearr)){
@@ -1075,11 +1219,15 @@
                                 }
                                 else{
                                     i36.className = "y"
+                                    if (!glist.includes(l6)){
+                                        document.getElementById(l6).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i36.className = "b"
+                            document.getElementById(l6).className = "bk"
                         }
                         i31.disabled = true;
                         i32.disabled = true;
@@ -1160,6 +1308,8 @@
                         if (trueword.includes(l1)){
                             if (trueword[0] === l1){
                                 i41.className = "g"
+                                document.getElementById(l1).className = "gk"
+                                glist.push(l1);
                             }
                             else{
                                 if (count(l1, arr) > count(l1, truearr)){
@@ -1168,15 +1318,21 @@
                                 }
                                 else{
                                     i41.className = "y"
+                                    if (!glist.includes(l1)){
+                                        document.getElementById(l1).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i41.className = "b"
+                            document.getElementById(l1).className = "bk"
                         }
                         if (trueword.includes(l2)){
                             if (trueword[1] === l2){
                                 i42.className = "g"
+                                document.getElementById(l2).className = "gk"
+                                glist.push(l2)
                             }
                             else{
                                 if (count(l2, arr) > count(l2, truearr)){
@@ -1185,15 +1341,21 @@
                                 }
                                 else{
                                     i42.className = "y"
+                                    if (!glist.includes(l2)){
+                                        document.getElementById(l2).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i42.className = "b"
+                            document.getElementById(l2).className = "bk"
                         }
                         if (trueword.includes(l3)){
                             if (trueword[2] === l3){
                                 i43.className = "g"
+                                document.getElementById(l3).className = "gk"
+                                glist.push(l3)
                             }
                             else{
                                 if (count(l3, arr) > count(l3, truearr)){
@@ -1202,15 +1364,21 @@
                                 }
                                 else{
                                     i43.className = "y"
+                                    if (!glist.includes(l3)){
+                                        document.getElementById(l3).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i43.className = "b"
+                            document.getElementById(l3).className = "bk"
                         }
                         if (trueword.includes(l4)){
                             if (trueword[3] === l4){
                                 i44.className = "g"
+                                document.getElementById(l4).className = "gk"
+                                glist.push(l4)
                             }
                             else{
                                 if (count(l4, arr) > count(l4, truearr)){
@@ -1219,15 +1387,21 @@
                                 }
                                 else{
                                     i44.className = "y"
+                                    if (!glist.includes(l4)){
+                                        document.getElementById(l4).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i44.className = "b"
+                            document.getElementById(l4).className = "bk"
                         }
                         if (trueword.includes(l5)){
                             if (trueword[4] === l5){
                                 i45.className = "g"
+                                document.getElementById(l5).className = "gk"
+                                glist.push(l5)
                             }
                             else{
                                 if (count(l5, arr) > count(l5, truearr)){
@@ -1236,15 +1410,21 @@
                                 }
                                 else{
                                     i45.className = "y"
+                                    if (!glist.includes(l5)){
+                                        document.getElementById(l5).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i45.className = "b"
+                            document.getElementById(l5).className = "bk"
                         }
                         if (trueword.includes(l6)){
                             if (trueword[5] === l6){
                                 i46.className = "g"
+                                document.getElementById(l6).className = "gk"
+                                glist.push(l6)
                             }
                             else{
                                 if (count(l6, arr) > count(l6, truearr)){
@@ -1253,11 +1433,15 @@
                                 }
                                 else{
                                     i46.className = "y"
+                                    if (!glist.includes(l6)){
+                                        document.getElementById(l6).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i46.className = "b"
+                            document.getElementById(l6).className = "bk"
                         }
                         i41.disabled = true;
                         i42.disabled = true;
@@ -1338,6 +1522,8 @@
                         if (trueword.includes(l1)){
                             if (trueword[0] === l1){
                                 i51.className = "g"
+                                document.getElementById(l1).className = "gk"
+                                glist.push(l1);
                             }
                             else{
                                 if (count(l1, arr) > count(l1, truearr)){
@@ -1346,15 +1532,21 @@
                                 }
                                 else{
                                     i51.className = "y"
+                                    if (!glist.includes(l1)){
+                                        document.getElementById(l1).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i51.className = "b"
+                            document.getElementById(l1).className = "bk"
                         }
                         if (trueword.includes(l2)){
                             if (trueword[1] === l2){
                                 i52.className = "g"
+                                document.getElementById(l2).className = "gk"
+                                glist.push(l2)
                             }
                             else{
                                 if (count(l2, arr) > count(l2, truearr)){
@@ -1363,15 +1555,21 @@
                                 }
                                 else{
                                     i52.className = "y"
+                                    if (!glist.includes(l2)){
+                                        document.getElementById(l2).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i52.className = "b"
+                            document.getElementById(l2).className = "bk"
                         }
                         if (trueword.includes(l3)){
                             if (trueword[2] === l3){
                                 i53.className = "g"
+                                document.getElementById(l3).className = "gk"
+                                glist.push(l3)
                             }
                             else{
                                 if (count(l3, arr) > count(l3, truearr)){
@@ -1380,15 +1578,21 @@
                                 }
                                 else{
                                     i53.className = "y"
+                                    if (!glist.includes(l3)){
+                                        document.getElementById(l3).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i53.className = "b"
+                            document.getElementById(l3).className = "bk"
                         }
                         if (trueword.includes(l4)){
                             if (trueword[3] === l4){
                                 i54.className = "g"
+                                document.getElementById(l4).className = "gk"
+                                glist.push(l4)
                             }
                             else{
                                 if (count(l4, arr) > count(l4, truearr)){
@@ -1397,15 +1601,21 @@
                                 }
                                 else{
                                     i54.className = "y"
+                                    if (!glist.includes(l4)){
+                                        document.getElementById(l4).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i54.className = "b"
+                            document.getElementById(l4).className = "bk"
                         }
                         if (trueword.includes(l5)){
                             if (trueword[4] === l5){
                                 i55.className = "g"
+                                document.getElementById(l5).className = "gk"
+                                glist.push(l5)
                             }
                             else{
                                 if (count(l5, arr) > count(l5, truearr)){
@@ -1414,15 +1624,21 @@
                                 }
                                 else{
                                     i55.className = "y"
+                                    if (!glist.includes(l5)){
+                                        document.getElementById(l5).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i55.className = "b"
+                            document.getElementById(l5).className = "bk"
                         }
                         if (trueword.includes(l6)){
                             if (trueword[5] === l6){
                                 i56.className = "g"
+                                document.getElementById(l6).className = "gk"
+                                glist.push(l6)
                             }
                             else{
                                 if (count(l6, arr) > count(l6, truearr)){
@@ -1431,11 +1647,15 @@
                                 }
                                 else{
                                     i56.className = "y"
+                                    if (!glist.includes(l6)){
+                                        document.getElementById(l6).className = "yk"
+                                    }
                                 }
                             }
                         }
                         else{
                             i56.className = "b"
+                            document.getElementById(l6).className = "bk"
                         }
                         i51.disabled = true;
                         i52.disabled = true;
@@ -1463,7 +1683,7 @@
                 float: right;
                 align-items: center;
                 padding-right: 80px;
-                padding-top: 100px;
+                padding-top: 50px;
             }
             .box {
                 font-size: 48px;
@@ -1507,6 +1727,76 @@
                 background-color: lightgrey;
                 border-radius: 10px;
                 outline: black;
+            }
+            .kb {
+                font-size: 48px;
+                font-family: 'Courier New', Courier, monospace;
+                height: 50px;
+                width: 50px;
+                display: inline;
+                border: 1px solid black;
+                border-radius: 4px;
+                margin-right: 2px;
+                padding-right: 5px;
+                padding-left: 5px;
+            }
+            .gk {
+                font-size: 48px;
+                font-family: 'Courier New', Courier, monospace;
+                height: 50px;
+                width: 50px;
+                display: inline;
+                border: 1px solid black;
+                border-radius: 4px;
+                margin-right: 2px;
+                padding-right: 5px;
+                padding-left: 5px;
+                background-color: green;
+            }
+            .yk {
+                font-size: 48px;
+                font-family: 'Courier New', Courier, monospace;
+                height: 50px;
+                width: 50px;
+                display: inline;
+                border: 1px solid black;
+                border-radius: 4px;
+                margin-right: 2px;
+                padding-right: 5px;
+                padding-left: 5px;
+                background-color: yellow;
+            }
+            .bk {
+                font-size: 48px;
+                font-family: 'Courier New', Courier, monospace;
+                height: 50px;
+                width: 50px;
+                display: inline;
+                border: 1px solid black;
+                border-radius: 4px;
+                margin-right: 2px;
+                padding-right: 5px;
+                padding-left: 5px;
+                background-color: lightgrey;
+            }
+            .space {
+                height: 50px;
+                width: 50px;
+                display: inline;
+                font-size: 46px;
+                color: white;
+            }
+            .bigspace {
+                font-size: 48px;
+                font-family: 'Courier New', Courier, monospace;
+                height: 50px;
+                width: 50px;
+                display: inline;
+                border-radius: 4px;
+                margin-right: 2px;
+                padding-right: 5px;
+                padding-left: 5px;
+                color: white;
             }
         </style>
     </body>
