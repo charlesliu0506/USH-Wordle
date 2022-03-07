@@ -58,10 +58,9 @@
             <p>
                 Hello! This is a 6 letter, 6 guess version of Wordle. The rules are as follows:<br>
                 1. A guess can be any valid six letter word.<br>
-                2. The answer is guaranteed to be a word relating to the USH Key Terms list.<br>
-                3. Certain terms, such as "The Plains Wars," may shorten, like "plains."<br>
+                2. The answer is related to the USH reading of the week.<br>
                 4. Standard Wordle rules for colors: green, yellow, and grey.<br>
-                5. Words update every six hours.<br>
+                5. Words update every day.<br>
                 6. Some things won't be as cool as the real Wordle (I'm not a professsional).<br>
                 7. Type <b>slowly</b>. Otherwise it might skip a box.<br>
                 8. Don't use this to actually study, your notes will be much more helpful.<br>
@@ -361,9 +360,9 @@
                 }
                 return count;
             }
-            const keybank = ["social", "blanky", "unions", "plains", "carpet", "blanky", "robber", "barons", "gospel", "blanky", "plessy", "redeem", "exodus", "blanky", "gilded", "wealth", "morill", "blanky", "darwin", "saloon", "patron", "blanky"]
-            var bignumber = Math.floor(Date.now()/21600000);
-            var trueword = keybank[bignumber - 76212];
+            const keybank = ["pardon", "reform", "voting"]
+            var bignumber = Math.floor(Date.now()/86400000);
+            var trueword = keybank[bignumber - 19058];
             for (let i = 1; i < 6; i++){
                 for (let j = 1; j < 7; j++){
                     document.getElementById("i" + i + j).disabled = true;
