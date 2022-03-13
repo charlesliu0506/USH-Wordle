@@ -360,9 +360,9 @@
                 }
                 return count;
             }
-            const keybank = ["pardon", "policy", "yellow", "teller", "movies", "modern"]
+            const keybank = ["pardon", "policy", "yellow", "teller", "movies", "modern", "battle"]
             var bignumber = Math.floor(Date.now()/86400000);
-            var trueword = keybank[bignumber - 19058];
+            var trueword = keybank[(bignumber - 19058)%7];
             for (let i = 1; i < 6; i++){
                 for (let j = 1; j < 7; j++){
                     document.getElementById("i" + i + j).disabled = true;
