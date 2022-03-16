@@ -5,71 +5,6 @@
             OSSM USH Wordle
         </title>
         <link rel = "icon" href = "iconic.ico">
-    </head>
-    <body onload = "i01.focus()">
-        <div id = "main">
-            <input class = "box" id = "i01" type = "text" maxlength= "1">
-            <input class = "box" id = "i02" type = "text" maxlength= "1">
-            <input class = "box" id = "i03" type = "text" maxlength= "1">
-            <input class = "box" id = "i04" type = "text" maxlength= "1">
-            <input class = "box" id = "i05" type = "text" maxlength= "1">
-            <input class = "box" id = "i06" type = "text" maxlength= "1">
-            <br><br>
-            <input class = "box" id = "i11" type = "text" maxlength= "1">
-            <input class = "box" id = "i12" type = "text" maxlength= "1">
-            <input class = "box" id = "i13" type = "text" maxlength= "1">
-            <input class = "box" id = "i14" type = "text" maxlength= "1">
-            <input class = "box" id = "i15" type = "text" maxlength= "1">
-            <input class = "box" id = "i16" type = "text" maxlength= "1">
-            <br><br>
-            <input class = "box" id = "i21" type = "text" maxlength= "1">
-            <input class = "box" id = "i22" type = "text" maxlength= "1">
-            <input class = "box" id = "i23" type = "text" maxlength= "1">
-            <input class = "box" id = "i24" type = "text" maxlength= "1">
-            <input class = "box" id = "i25" type = "text" maxlength= "1">
-            <input class = "box" id = "i26" type = "text" maxlength= "1">
-            <br><br>
-            <input class = "box" id = "i31" type = "text" maxlength= "1">
-            <input class = "box" id = "i32" type = "text" maxlength= "1">
-            <input class = "box" id = "i33" type = "text" maxlength= "1">
-            <input class = "box" id = "i34" type = "text" maxlength= "1">
-            <input class = "box" id = "i35" type = "text" maxlength= "1">
-            <input class = "box" id = "i36" type = "text" maxlength= "1">
-            <br><br>
-            <input class = "box" id = "i41" type = "text" maxlength= "1">
-            <input class = "box" id = "i42" type = "text" maxlength= "1">
-            <input class = "box" id = "i43" type = "text" maxlength= "1">
-            <input class = "box" id = "i44" type = "text" maxlength= "1">
-            <input class = "box" id = "i45" type = "text" maxlength= "1">
-            <input class = "box" id = "i46" type = "text" maxlength= "1">
-            <br><br>
-            <input class = "box" id = "i51" type = "text" maxlength= "1">
-            <input class = "box" id = "i52" type = "text" maxlength= "1">
-            <input class = "box" id = "i53" type = "text" maxlength= "1">
-            <input class = "box" id = "i54" type = "text" maxlength= "1">
-            <input class = "box" id = "i55" type = "text" maxlength= "1">
-            <input class = "box" id = "i56" type = "text" maxlength= "1">
-            <br><br>
-        </div>
-        <div id = "desc">
-            <h1>
-                US History Wordle
-            </h1>
-            <p>
-                Hello! This is a 6 letter, 6 guess version of Wordle. The rules are as follows:<br>
-                1. A guess can be any valid six letter word.<br>
-                2. The answer is related to the USH reading or lecture of the week.<br>
-                4. Standard Wordle rules for colors: green, yellow, and grey.<br>
-                5. Words update every day.<br>
-                6. Some things won't be as cool as the real Wordle (I'm not a professsional).<br>
-                7. Type <b>slowly</b>. Otherwise it might skip a box.<br>
-                8. Don't use this to actually study, your notes will be much more helpful.<br>
-                9. Please, please don't play this in US History lecture or practicum (please).
-            </p>
-            <div class = "kb" id = "q">Q</div><div class = "kb" id = "w">W</div><div class = "kb" id = "e">E</div><div class = "kb" id = "r">R</div><div class = "kb" id = "t">T</div><div class = "kb" id = "y">Y</div><div class = "kb" id = "u">U</div><div class = "kb" id = "i">I</div><div class = "kb" id = "o">O</div><div class = "kb" id = "p">P</div><br><br>
-            <div class = "space">a</div><div class = "kb" id = "a">A</div><div class = "kb" id = "s">S</div><div class = "kb" id = "d">D</div><div class = "kb" id = "f">F</div><div class = "kb" id = "g">G</div><div class = "kb" id = "h">H</div><div class = "kb" id = "j">J</div><div class = "kb" id = "k">K</div><div class = "kb" id = "l">L</div><br><br>
-            <div class = "space">a</div><div class = "bigspace">Z</div><div class = "kb" id = "z">Z</div><div class = "kb" id = "x">X</div><div class = "kb" id = "c">C</div><div class = "kb" id = "v">V</div><div class = "kb" id = "b">B</div><div class = "kb" id = "n">N</div><div class = "kb" id = "m">M</div>
-        </div>
         <script>
             const words = ["aahing", "aaliis", "aarrgh", "abacas", "abacus", "abakas", "abamps", "abased", "abaser", "abases", "abasia",
             "abated", "abater", "abates", "abatis", "abator", "abayas", "abbacy", "abbess", "abbeys", "abbots", "abduce", "abduct", "abeles", 
@@ -381,7 +316,10 @@
                 for (let j = 2; j < 7; j++){
                     document.getElementById("i" + i + j).addEventListener("keyup", function(event){
                         if (event.keyCode === 8){
-                            document.getElementById("i" + i + (j-1)).focus();
+                            if (document.getElementById("i" + i + j).value = ""){
+                                document.getElementById("i" + i + (j-1)).value = "";
+                                document.getElementById("i" + i + (j-1)).focus();
+                            }
                         }
                     })
                 }
@@ -573,5 +511,70 @@
                 color: white;
             }
         </style>
+    </head>
+    <body onload = "i01.focus()">
+        <div id = "main">
+            <input class = "box" id = "i01" type = "text" maxlength= "1">
+            <input class = "box" id = "i02" type = "text" maxlength= "1">
+            <input class = "box" id = "i03" type = "text" maxlength= "1">
+            <input class = "box" id = "i04" type = "text" maxlength= "1">
+            <input class = "box" id = "i05" type = "text" maxlength= "1">
+            <input class = "box" id = "i06" type = "text" maxlength= "1">
+            <br><br>
+            <input class = "box" id = "i11" type = "text" maxlength= "1">
+            <input class = "box" id = "i12" type = "text" maxlength= "1">
+            <input class = "box" id = "i13" type = "text" maxlength= "1">
+            <input class = "box" id = "i14" type = "text" maxlength= "1">
+            <input class = "box" id = "i15" type = "text" maxlength= "1">
+            <input class = "box" id = "i16" type = "text" maxlength= "1">
+            <br><br>
+            <input class = "box" id = "i21" type = "text" maxlength= "1">
+            <input class = "box" id = "i22" type = "text" maxlength= "1">
+            <input class = "box" id = "i23" type = "text" maxlength= "1">
+            <input class = "box" id = "i24" type = "text" maxlength= "1">
+            <input class = "box" id = "i25" type = "text" maxlength= "1">
+            <input class = "box" id = "i26" type = "text" maxlength= "1">
+            <br><br>
+            <input class = "box" id = "i31" type = "text" maxlength= "1">
+            <input class = "box" id = "i32" type = "text" maxlength= "1">
+            <input class = "box" id = "i33" type = "text" maxlength= "1">
+            <input class = "box" id = "i34" type = "text" maxlength= "1">
+            <input class = "box" id = "i35" type = "text" maxlength= "1">
+            <input class = "box" id = "i36" type = "text" maxlength= "1">
+            <br><br>
+            <input class = "box" id = "i41" type = "text" maxlength= "1">
+            <input class = "box" id = "i42" type = "text" maxlength= "1">
+            <input class = "box" id = "i43" type = "text" maxlength= "1">
+            <input class = "box" id = "i44" type = "text" maxlength= "1">
+            <input class = "box" id = "i45" type = "text" maxlength= "1">
+            <input class = "box" id = "i46" type = "text" maxlength= "1">
+            <br><br>
+            <input class = "box" id = "i51" type = "text" maxlength= "1">
+            <input class = "box" id = "i52" type = "text" maxlength= "1">
+            <input class = "box" id = "i53" type = "text" maxlength= "1">
+            <input class = "box" id = "i54" type = "text" maxlength= "1">
+            <input class = "box" id = "i55" type = "text" maxlength= "1">
+            <input class = "box" id = "i56" type = "text" maxlength= "1">
+            <br><br>
+        </div>
+        <div id = "desc">
+            <h1>
+                US History Wordle
+            </h1>
+            <p>
+                Hello! This is a 6 letter, 6 guess version of Wordle. The rules are as follows:<br>
+                1. A guess can be any valid six letter word.<br>
+                2. The answer is related to the USH reading or lecture of the week.<br>
+                4. Standard Wordle rules for colors: green, yellow, and grey.<br>
+                5. Words update every day.<br>
+                6. Some things won't be as cool as the real Wordle (I'm not a professsional).<br>
+                7. Type <b>slowly</b>. Otherwise it might skip a box.<br>
+                8. Don't use this to actually study, your notes will be much more helpful.<br>
+                9. Please, please don't play this in US History lecture or practicum (please).
+            </p>
+            <div class = "kb" id = "q">Q</div><div class = "kb" id = "w">W</div><div class = "kb" id = "e">E</div><div class = "kb" id = "r">R</div><div class = "kb" id = "t">T</div><div class = "kb" id = "y">Y</div><div class = "kb" id = "u">U</div><div class = "kb" id = "i">I</div><div class = "kb" id = "o">O</div><div class = "kb" id = "p">P</div><br><br>
+            <div class = "space">a</div><div class = "kb" id = "a">A</div><div class = "kb" id = "s">S</div><div class = "kb" id = "d">D</div><div class = "kb" id = "f">F</div><div class = "kb" id = "g">G</div><div class = "kb" id = "h">H</div><div class = "kb" id = "j">J</div><div class = "kb" id = "k">K</div><div class = "kb" id = "l">L</div><br><br>
+            <div class = "space">a</div><div class = "bigspace">Z</div><div class = "kb" id = "z">Z</div><div class = "kb" id = "x">X</div><div class = "kb" id = "c">C</div><div class = "kb" id = "v">V</div><div class = "kb" id = "b">B</div><div class = "kb" id = "n">N</div><div class = "kb" id = "m">M</div>
+        </div>
     </body>
 </html>
