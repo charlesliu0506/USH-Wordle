@@ -285,106 +285,6 @@
             "yagers", "yahoos", "yairds", "yakked", "yakker", "yakuza", "yamens", "yammer", "yamuns", "yanked", "yanqui", "yantra", "yapock", "yapoks", "yapons", "yapped", "yapper", "yarded", "yarder", "yarely", "yarest", "yarned", "yarner", "yarrow", "yasmak", "yatter", "yauped", "yauper", "yaupon", "yautia", "yawing", "yawled", "yawned", "yawner", "yawped", "yawper", "yclept", "yeaned", "yearly", "yearns", "yeasts", "yeasty", "yecchs", "yeelin", "yelled", "yeller", "yellow", "yelped", "yelper", "yenned", "yentas", "yentes", "yeoman", "yeomen", "yerbas", "yerked", "yessed", "yesses", "yester", "yeuked", "yields", "yipped", "yippee", "yippie", "yirred", "yirths", "yobbos", "yocked", "yodels", "yodled", "yodler", "yodles", "yogees", "yogini", "yogins", "yogurt", "yoicks", "yokels", "yoking", "yolked", "yonder", "yonker", "youngs", "youpon", "youths", "yowies", "yowing", "yowled", "yowler", "yttria", "yttric", "yuccas", "yucked", "yukked", "yulans", "yupons", "yuppie", "yutzes", "zaddik", "zaffar", "zaffer", "zaffir", "zaffre", "zaftig", "zagged", "zaikai", "zaires", "zamias", "zanana", "zander", "zanier", "zanies", "zanily", "zanzas", "zapped", "zapper", "zareba", "zariba", "zayins", "zazens", "zealot", "zeatin", "zebeck", "zebecs", "zebras", "zechin", "zenana", "zenith", "zephyr", "zeroed", "zeroes", "zeroth", "zested", "zester", "zeugma", "zibeth", "zibets", "zigged", "zigzag", "zillah", "zinced", "zincic", "zincky", "zinebs", "zinged", "zinger", "zinnia", "zipped", "zipper", "zirams", "zircon", "zither", "zizith", "zizzle", "zlotys", "zoaria", "zocalo", "zodiac", "zoecia", "zoftig", "zombie", "zombis", "zonary", "zonate", "zoners", "zoning", "zonked", "zonula", "zonule", "zooids", "zooier", "zoomed", "zoonal", "zooned", "zorils", "zoster", "zouave", "zounds", "zoysia", "zydeco", "zygoid", "zygoma", "zygose", "zygote", "zymase"]
 
         </script>
-        <script>
-            function count(char, arr){
-                var count = 0;
-                for (i = 0; i < 6; i++){
-                    if (char === arr[i]){
-                        count++;
-                    }
-                }
-                return count;
-            }
-            const keybank = ["pardon", "policy", "yellow", "teller", "movies", "modern", "battle"]
-            var bignumber = Math.floor(Date.now()/86400000);
-            var trueword = keybank[(bignumber - 19058)%7];
-            for (let i = 1; i < 6; i++){
-                for (let j = 1; j < 7; j++){
-                    document.getElementById("i" + i + j).disabled = true;
-                }
-            }
-            for (let i = 0; i < 6; i++){
-                for (let j = 1; j < 6; j++){
-                    document.getElementById("i" + i + j).addEventListener("keyup", function(event){
-                        if (event.keyCode > 64 && event.keyCode < 91){
-                            document.getElementById("i" + i + (j+1)).focus();
-                        }
-                    })
-                }
-            }
-            for (let i = 0; i < 6; i++){
-                for (let j = 2; j < 7; j++){
-                    document.getElementById("i" + i + j).addEventListener("keyup", function(event){
-                        if (event.keyCode === 8){
-                            if (document.getElementById("i" + i + j).value = ""){
-                                document.getElementById("i" + i + (j-1)).value = "";
-                                document.getElementById("i" + i + (j-1)).focus();
-                            }
-                        }
-                    })
-                }
-            }
-            const glist = [];
-            const solved = ["Wow, that was fast! A little too fast...", "Wow, that was fast!", "Fantastic job!", "Great going!", "Nice one!", "Phew, that was close!"];
-            for (let i = 0; i < 6; i++){
-                document.getElementById("i" + i + "6").addEventListener("keyup", function(event){
-                    if (event.keyCode === 13){
-                        let l1 = document.getElementById("i" + i + "1").value.toLowerCase();
-                        let l2 = document.getElementById("i" + i + "2").value.toLowerCase();
-                        let l3 = document.getElementById("i" + i + "3").value.toLowerCase();
-                        let l4 = document.getElementById("i" + i + "4").value.toLowerCase();
-                        let l5 = document.getElementById("i" + i + "5").value.toLowerCase();
-                        let l6 = document.getElementById("i" + i + "6").value.toLowerCase();
-                        let word = (l1 + l2 + l3 + l4 + l5 + l6);
-                        let arr = [l1, l2, l3, l4, l5, l6]
-                        let truearr = trueword.split('')
-                        if (words.includes(word) || keybank.includes(word)){
-                            for (let j = 6; j > 0; j--){
-                                let letter = eval("l" + j)
-                                if (trueword.includes(letter)){
-                                    if (trueword[j - 1] === letter){
-                                        document.getElementById("i" + i + j).className = "g"
-                                        document.getElementById(letter).className = "gk"
-                                        glist.push(letter);
-                                    }
-                                    else{
-                                        if (count(letter, arr) > count(letter, truearr)){
-                                            document.getElementById("i" + i + j).className = "b"
-                                            arr.splice((j - 1), 1);
-                                        }
-                                        else{
-                                            document.getElementById("i" + i + j).className = "y"
-                                            if (!glist.includes(letter)){
-                                                document.getElementById(letter).className = "yk"
-                                            }
-                                        }
-                                    }
-                                }
-                                else{
-                                    document.getElementById("i" + i + j).className = "b"
-                                    document.getElementById(letter).className = "bk"
-                                }
-                                document.getElementById("i" + i + j).disabled = true;
-                            }
-                            if (trueword === word){
-                                alert(solved[i])
-                            }
-                            else{
-                                if (i === 5){
-                                    alert('That\'s too bad... You should try again!')
-                                }
-                                else{
-                                    for (let j = 1; j < 7; j++){
-                                        document.getElementById("i" + (i + 1) + j).disabled = false;
-                                    }
-                                    document.getElementById("i" + (i + 1) + "1").focus();
-                                }
-                            }
-                        }
-                    }
-                });
-            }
-        </script>
         <style>
             #main {
                 float: left;
@@ -576,5 +476,105 @@
             <div class = "space">a</div><div class = "kb" id = "a">A</div><div class = "kb" id = "s">S</div><div class = "kb" id = "d">D</div><div class = "kb" id = "f">F</div><div class = "kb" id = "g">G</div><div class = "kb" id = "h">H</div><div class = "kb" id = "j">J</div><div class = "kb" id = "k">K</div><div class = "kb" id = "l">L</div><br><br>
             <div class = "space">a</div><div class = "bigspace">Z</div><div class = "kb" id = "z">Z</div><div class = "kb" id = "x">X</div><div class = "kb" id = "c">C</div><div class = "kb" id = "v">V</div><div class = "kb" id = "b">B</div><div class = "kb" id = "n">N</div><div class = "kb" id = "m">M</div>
         </div>
+        <script>
+            function count(char, arr){
+                var count = 0;
+                for (i = 0; i < 6; i++){
+                    if (char === arr[i]){
+                        count++;
+                    }
+                }
+                return count;
+            }
+            const keybank = ["pardon", "policy", "yellow", "teller", "movies", "modern", "battle"]
+            var bignumber = Math.floor(Date.now()/86400000);
+            var trueword = keybank[(bignumber - 19057)%7];
+            for (let i = 1; i < 6; i++){
+                for (let j = 1; j < 7; j++){
+                    document.getElementById("i" + i + j).disabled = true;
+                }
+            }
+            for (let i = 0; i < 6; i++){
+                for (let j = 1; j < 6; j++){
+                    document.getElementById("i" + i + j).addEventListener("keyup", function(event){
+                        if (event.keyCode > 64 && event.keyCode < 91){
+                            document.getElementById("i" + i + (j+1)).focus();
+                        }
+                    })
+                }
+            }
+            for (let i = 0; i < 6; i++){
+                for (let j = 2; j < 7; j++){
+                    document.getElementById("i" + i + j).addEventListener("keydown", function(event){
+                        if (event.keyCode === 8){
+                            if (document.getElementById("i" + i + j).value == ""){
+                                document.getElementById("i" + i + (j-1)).value = "";
+                                document.getElementById("i" + i + (j-1)).focus();
+                            }
+                        }
+                    })
+                }
+            }
+            const glist = [];
+            const solved = ["Wow, that was fast! A little too fast...", "Wow, that was fast!", "Fantastic job!", "Great going!", "Nice one!", "Phew, that was close!"];
+            for (let i = 0; i < 6; i++){
+                document.getElementById("i" + i + "6").addEventListener("keyup", function(event){
+                    if (event.keyCode === 13){
+                        let l1 = document.getElementById("i" + i + "1").value.toLowerCase();
+                        let l2 = document.getElementById("i" + i + "2").value.toLowerCase();
+                        let l3 = document.getElementById("i" + i + "3").value.toLowerCase();
+                        let l4 = document.getElementById("i" + i + "4").value.toLowerCase();
+                        let l5 = document.getElementById("i" + i + "5").value.toLowerCase();
+                        let l6 = document.getElementById("i" + i + "6").value.toLowerCase();
+                        let word = (l1 + l2 + l3 + l4 + l5 + l6);
+                        let arr = [l1, l2, l3, l4, l5, l6]
+                        let truearr = trueword.split('')
+                        if (words.includes(word) || keybank.includes(word)){
+                            for (let j = 6; j > 0; j--){
+                                let letter = eval("l" + j)
+                                if (trueword.includes(letter)){
+                                    if (trueword[j - 1] === letter){
+                                        document.getElementById("i" + i + j).className = "g"
+                                        document.getElementById(letter).className = "gk"
+                                        glist.push(letter);
+                                    }
+                                    else{
+                                        if (count(letter, arr) > count(letter, truearr)){
+                                            document.getElementById("i" + i + j).className = "b"
+                                            arr.splice((j - 1), 1);
+                                        }
+                                        else{
+                                            document.getElementById("i" + i + j).className = "y"
+                                            if (!glist.includes(letter)){
+                                                document.getElementById(letter).className = "yk"
+                                            }
+                                        }
+                                    }
+                                }
+                                else{
+                                    document.getElementById("i" + i + j).className = "b"
+                                    document.getElementById(letter).className = "bk"
+                                }
+                                document.getElementById("i" + i + j).disabled = true;
+                            }
+                            if (trueword === word){
+                                alert(solved[i])
+                            }
+                            else{
+                                if (i === 5){
+                                    alert('That\'s too bad... You should try again!')
+                                }
+                                else{
+                                    for (let j = 1; j < 7; j++){
+                                        document.getElementById("i" + (i + 1) + j).disabled = false;
+                                    }
+                                    document.getElementById("i" + (i + 1) + "1").focus();
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        </script>
     </body>
 </html>
